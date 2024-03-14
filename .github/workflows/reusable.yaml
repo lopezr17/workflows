@@ -1,4 +1,5 @@
 name: Reusable Workflow
+
 on:
   workflow_call:
     inputs:
@@ -21,7 +22,7 @@ jobs:
   log-context-and-inputs:
     runs-on: ubuntu-latest
     steps:
-      - name: Dispay Github Context
+      - name: Display GitHub Context
         run: echo '${{ toJSON(github) }}'
       - name: Display name input
         run: echo ${{ inputs.name }}
